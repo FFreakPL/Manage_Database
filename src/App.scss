@@ -1,154 +1,19 @@
 @import "Reset";
+@import "./Styles/Variables";
 @import "./Styles/Keyframes";
 @import "./Styles/Mixin";
+@import "./Styles/BackToTop";
+@import "./Styles/List";
+@import "./Styles/ItemInfo";
+@import "./Styles/Pagination";
 
-//Variables
-$font-primary: Ubuntu, sans-serif;
-
-//Homepage Styling
+//App
 .app {
   width: 100%;
   height: 100vh;
   font-family: $font-primary;
   box-sizing: border-box;
-}
-
-.list {
-  display: flex;
-  flex-direction: column;
-
-  @include tablet {
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-  }
-  @include desktop {
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  &_checked {
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &_counter {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-left: 2rem;
-    }
-  }
-  &_item {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    max-width: 100%;
-    margin-bottom: 2vh;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    border: 1px solid lightgrey;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0px 0px 50px 22px rgb(0 0 0 / 14%);
-
-    @include tablet {
-      flex-direction: column-reverse;
-      max-width: 20vw;
-    }
-    @include desktop {
-      flex-direction: column-reverse;
-      max-width: 20vw;
-    }
-    &_checkbox {
-      width: 2rem;
-      height: 2rem;
-      margin: 1rem auto;
-
-      &:hover {
-        cursor: pointer;
-      }
-    }
-
-    &_container {
-      display: flex;
-      flex-direction: column-reverse;
-      width: 40vw;
-
-      @include tablet {
-        width: 100%;
-      }
-      @include desktop {
-        width: 100%;
-      }
-    }
-    &_img {
-      width: 30vw;
-      height: 100%;
-      border-radius: 1rem;
-
-      @include tablet {
-        width: 100%;
-      }
-      @include desktop {
-        width: 100%;
-      }
-
-      &:hover {
-        cursor: pointer;
-        animation: hoverZoomOnly .3s ease forwards;
-      }
-    }
-  }
-  label {
-    margin-top: 0.5vh;
-    margin-bottom: 0.5vh;
-    text-align: center;
-    font-size: 3vw;
-
-    @include tablet {
-      font-size: 2vw;
-    }
-    @include desktop {
-      font-size: 2vh;
-    }
-  }
-}
-
-.itemInfo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  width: 100vw;
-  height: 100vh;
-
-  &_img {
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 60%;
-  }
-
-  &_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 40%;
-  }
-  &_albumId {
-    margin-top: 2vh;
-  }
-  button {
-    margin: 2vh auto;
-    background-color: transparent;
-    border: 1px solid lightgrey;
-    border-radius: 2rem;
-    padding: 1rem;
-    width: 45vw;
-  }
 }

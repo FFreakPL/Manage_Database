@@ -1,0 +1,74 @@
+//ItemInfo Component
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+  &_img {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 40%;
+  }
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 80%;
+    width:90vw;
+    border-radius: 2rem;
+
+    @include tablet {
+      width: 70vw;
+    }
+    @include desktop {
+      width: 40vw;
+    }
+  }
+  &_info {
+    &_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 60%;
+      box-shadow: 0px 0px 50px 22px rgb(0 0 0 / 17%);
+      border-radius: 0 0 2rem 2rem;
+      width: 100%;
+      background-color: rgba(255,255,255,.6);
+
+      p {
+        font-size: 2vh;
+        line-height: 3vh;
+      }
+
+      p > span {
+        font-weight: 700;
+      }
+    }
+  }
+  &_albumId {
+    margin-top: 2vh;
+  }
+  button {
+    margin: 2vh auto;
+    background-color: #ffffff;
+    border: 0px solid white;
+    border-radius: 2rem;
+    padding: 1rem;
+    font-size: 1.5vh;
+    width: 30%;
+    text-transform: uppercase;
+
+    &:hover {
+      cursor: pointer;
+      animation: hoverZoomOnly .3s ease forwards, buttonChange .3s ease forwards;
+    }
+  }
+}

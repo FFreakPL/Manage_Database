@@ -6,3 +6,23 @@
     transform: scale(1.1);
   }
 }
+
+@keyframes hoverZoomCheckbox {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes buttonChange {
+  from {
+    background-color: #FFFFFF;
+    color: #222222;
+  }
+  to {
+    background-color: #222222;
+    color: #FFFFFF;
+  }
+}
