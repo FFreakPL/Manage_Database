@@ -68,7 +68,10 @@
 
     &:hover {
       cursor: pointer;
-      animation: hoverZoomOnly .3s ease forwards, buttonChange .3s ease forwards;
+      animation: hoverZoomOnly .3s ease forwards;
+    }
+    a {
+      text-decoration: none;
     }
   }
 }

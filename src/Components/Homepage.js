@@ -1,13 +1,16 @@
 import React, { useState, useEffect} from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation} from "react-router-dom";
 import {BASE_URL} from "./API"
 import ReactPaginate from "react-paginate";
 import ButtonBackToTop from "./ButtonToTop"
+import ResetButton from "./ResetButton";
 
 export default function Homepage() {
+    const location = useLocation()
     const [list, setList] = useState([]);
     const [selectedItems, setSelectedItems] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
+    const { items } = location.state
 
     //Pobieranie danych z serwera
     useEffect(() => {
@@ -16,8 +19,18 @@ export default function Homepage() {
             .then(data => setList(data))
             .catch(error => console.error(error));
     }, [])
+
+    useEffect(() => {
+        if(items)
+        setSelectedItems(prevState => items)
+    },[])
+
+    console.log(selectedItems)
     if(!list.length){
-        return <div>No items yet...</div>
+        return <div style={{
+            margin: "0 auto",
+            fontSize: "10vw"
+        }}>Loading</div>
     }
 
     //Obsługa wyboru elementu
@@ -42,6 +55,7 @@ export default function Homepage() {
         <>
             <div className="list_checked">Liczba zaznaczonych elementów:
                 <span className="list_checked_counter">{selectedItems.length}</span>
+                <ResetButton props={setSelectedItems}/>
             </div>
             <ul className="list">
                 {currentPageData.map((item, index) => (
@@ -60,7 +74,9 @@ export default function Homepage() {
                                 onChange={handleChange}/>
                             <label htmlFor={index}>{item.title}</label>
                         </div>
-                        <Link className="list_link" to={`/item/${index + 1}`} state={{ item : item}} key={index}>
+                        <Link className="list_link" to={`/item/${index + 1}`}
+                              state={{ item : item, selectedItems: selectedItems}}
+                              key={index}>
                             <img className="list_item_img" src={item.url}/>
                         </Link>
                     </li>

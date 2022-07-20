@@ -1,17 +1,13 @@
 import React from 'react';
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 export default function ItemInfo() {
-    const navigate = useNavigate();
     const location = useLocation()
     const { item } = location.state
+    const { selectedItems } = location.state
 
-    const handleBack = () => {
-        navigate("/")
-    }
-
+    //Pobranie koloru elementu z jego adresu url
     const color = item.url.slice(32);
-    console.log(color);
 
     return (
         <div className="itemInfo">
@@ -27,7 +23,11 @@ export default function ItemInfo() {
                     <p className="itemInfo_title"><span>Title:</span><br></br>{item.title}</p>
                     <p className="itemInfo_Url"><span>Url:</span><br></br>{item.url}</p>
                     <p className="itemInfo_ThumbnailUrl"><span>ThumbnailUrl:</span><br></br>{item.url}</p>
-                    <button type="button" className="btn_back" onClick={handleBack}>Wstecz</button>
+                    <button type="button" className="btn_back">
+                        <Link to={"/"}
+                              state={{items: selectedItems}}>Wstecz
+                        </Link>
+                    </button>
                 </div>
             </div>
         </div>
