@@ -5,12 +5,12 @@ import ReactPaginate from "react-paginate";
 import ButtonBackToTop from "./ButtonToTop"
 import ResetButton from "./ResetButton";
 
-export default function Homepage() {
+export default function HomepageState() {
     const location = useLocation()
     const [list, setList] = useState([]);
     const [selectedItems, setSelectedItems] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
-    // const { items } = location.state
+    const { items } = location.state
 
 
     //Pobieranie danych z serwera
@@ -21,13 +21,13 @@ export default function Homepage() {
             .catch(error => console.error(error));
     }, [])
 
-    // useEffect(() => {
-    //     if(items)
-    //     setSelectedItems(prevState => items)
-    // },[])
-    //
-    // console.log(selectedItems)
-    // console.log(items)
+    useEffect(() => {
+        if(items)
+            setSelectedItems(prevState => items)
+    },[])
+
+    console.log(selectedItems)
+    console.log(items)
     if(!list.length){
         return <div style={{
             margin: "0 auto",

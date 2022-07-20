@@ -24,7 +24,7 @@ export default function ItemInfo() {
                     <p className="itemInfo_Url"><span>Url:</span><br></br>{item.url}</p>
                     <p className="itemInfo_ThumbnailUrl"><span>ThumbnailUrl:</span><br></br>{item.url}</p>
                     <button type="button" className="btn_back">
-                        <Link to={"/"}
+                        <Link to={"/homepagestate"}
                               state={{items: selectedItems}}>Wstecz
                         </Link>
                     </button>
