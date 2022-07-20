@@ -12,7 +12,6 @@ export default function HomepageState() {
     const [currentPage, setCurrentPage] = useState(0);
     const { items } = location.state
 
-
     //Pobieranie danych z serwera
     useEffect(() => {
         fetch(BASE_URL)
