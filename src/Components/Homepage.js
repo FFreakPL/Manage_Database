@@ -10,7 +10,6 @@ export default function Homepage() {
     const [list, setList] = useState([]);
     const [selectedItems, setSelectedItems] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
-    const { items } = location.state
 
     //Pobieranie danych z serwera
     useEffect(() => {
@@ -20,6 +19,7 @@ export default function Homepage() {
             .catch(error => console.error(error));
     }, [])
 
+    const { items } = location.state
     useEffect(() => {
         if(items)
         setSelectedItems(prevState => items)
