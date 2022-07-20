@@ -1,3 +1,34 @@
+# Managing Database App
+This app fetch data and generates list of items (5000 units) in order to show their content.
+
+`HomePage`
+<p><img width="360" alt="HomePage" src="https://user-images.githubusercontent.com/94534923/180004859-b0bc3b35-707c-4813-a6ea-5ada31fbaeef.png">
+<img height="201" alt="tablet HomePage" src="https://user-images.githubusercontent.com/94534923/180005892-80b0ccbf-bb9f-4856-a396-d304a87ccd05.png">
+<img height="201" alt="mobile HomePage" src="https://user-images.githubusercontent.com/94534923/180005887-d10e1f2a-88e8-4fc1-88cd-0c8c6d779d41.png"></p>
+
+`Item Info Page`
+<p><img width="360" alt="HomePage" src="https://user-images.githubusercontent.com/94534923/180004864-452bb121-b964-4988-a6c0-946c65f1bbc2.png">
+
+## Feautures
+<li>Responsive Design</li>
+<li>Checkbox counter with reset button</li>
+<li>Dynamic React Routing</li>
+<li>React Paginate</li>
+
+## Running APP
+<p>https://manage-database.vercel.app</p>
+
+## Technologies
+<p align="left">
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="Javascript" /></a>
+    <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" width="36" height="36" alt="NodeJS" /></a>
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /></a>
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a>
+  <a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" alt="CSS3" /></a>
+<a href="https://sass-lang.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/sass-colored.svg" width="36" height="36" alt="Sass" /></a>
+<a href="https://webpack.js.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/webpack-colored.svg" width="36" height="36" alt="Webpack" /></a>
+</p>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
